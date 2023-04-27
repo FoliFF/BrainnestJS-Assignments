@@ -1,0 +1,10 @@
+#score{
+    position: relative;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.5em;
+    color: #fff;
+    background: #000;
+    border-radius: 10px;
+    width: fit-content;
+}
