@@ -5,11 +5,11 @@ function computerPlay() {
   // Map the random number to rock, paper, or scissors
   switch (randomNum) {
     case 0:
-      return 'Rock';
-      case 1:
-      return 'Paper';
+      return 'rock';
+    case 1:
+      return 'paper';
     case 2:
-      return 'Scissors';
+      return 'scissors';
   }
 }
 
@@ -48,9 +48,9 @@ function playRound(playerSelection, computerSelection) {
 function game() {
   let scores = { player: 0, computer: 0 };
 
-  const rockButton = document.querySelector('#rock');
-  const paperButton = document.querySelector('#paper');
-  const scissorsButton = document.querySelector('#scissors');
+  const rockButton = document.querySelector('[data-selection="rock"]');
+  const paperButton = document.querySelector('[data-selection="paper"]');
+  const scissorsButton = document.querySelector('[data-selection="scissors"]');
 
   rockButton.addEventListener('click', function() {
     const roundResult = playRound('rock', computerPlay());
@@ -73,9 +73,7 @@ function game() {
 
 function displayResult(result) {
   const resultsDiv = document.querySelector('#results');
-  const p = document.createElement('p');
-  p.textContent = result;
-  resultsDiv.appendChild(p);
+  resultsDiv.innerHTML = `<h3>${result}</h3>`;
 }
 
 function updateScore(result, scores) {
@@ -96,7 +94,7 @@ function updateScore(result, scores) {
 }
 
 function disableButtons() {
-  const buttons = document.querySelectorAll('button');
+  const buttons = document.querySelectorAll('.rps');
   buttons.forEach(button => {
     button.disabled = true;
   });
