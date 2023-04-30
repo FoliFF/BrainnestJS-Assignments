@@ -29,7 +29,7 @@ function playRound(playerSelection, computerSelection) {
     scissors: {
       rock: 'You Lose! Computer chose ✊ Rock',
       paper: 'You Win! Computer chose 🤚 Paper',
-      scissors: 'Tie! Computer ✌️ Scissors'
+      scissors: 'Tie! Computer chose ✌️ Scissors'
     }
   };
   
