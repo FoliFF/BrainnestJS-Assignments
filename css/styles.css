@@ -8,7 +8,7 @@ header{
   border-radius: 10px;
   text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
-  color: #fff;
+  color: #CCC;
 }
 
 body{
@@ -23,7 +23,7 @@ main{
   justify-content: center;
   background: linear-gradient(to right, purple, blue);
   border-radius: 10px;
-  color: #fff;
+  color: #CCC;
 }
 
 .rps-selection{
@@ -53,7 +53,8 @@ main{
   padding: 10px;
   margin: 10px auto;
   font-size: 1.5em;
-  color: #fff;
+  font-weight: 700;
+  color: #CCC;
   background: linear-gradient(to right, purple, blue);
   border-radius: 10px;
   width: fit-content;
@@ -68,8 +69,22 @@ main{
   align-items: center; /* Center the div vertically using flexbox */
   height: 100px; /* Set the height of the div */
   border-radius: 10px;
+  padding: 10px;
 }
 
 #results {
-  color: #fff;
+  color: #CCC;
+  font-weight: 700;
+}
+
+#play-again{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  border: solid 2px black;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1em;
+  color: black;
+  cursor: pointer;
+  background: green;
 }

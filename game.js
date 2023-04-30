@@ -34,9 +34,7 @@ function playRound(playerSelection, computerSelection) {
   };
   
   // Return the appropriate outcome based on the player and computer selections
-  if (outcomes[playerSelection][computerSelection]) {
-    return outcomes[playerSelection][computerSelection];
-  } 
+  return outcomes[playerSelection][computerSelection];
 }
 
 function game() {
@@ -81,9 +79,11 @@ function updateScore(result, scores) {
   if (scores.player === 5) {
     displayResult('You win the game!');
     disableButtons();
+    playAgain()
   } else if (scores.computer === 5) {
     displayResult('You lose the game!');
     disableButtons();
+    playAgain()
   }
 }
 
@@ -91,6 +91,18 @@ function disableButtons() {
   const buttons = document.querySelectorAll('.rps');
   buttons.forEach(button => {
     button.disabled = true;
+  });
+}
+
+function playAgain() {
+  const playAgainButton = document.createElement("button");
+  playAgainButton.textContent = "Play again?";
+  playAgainButton.id = "play-again";
+  const resultsDiv = document.querySelector("#results");
+  resultsDiv.appendChild(playAgainButton);
+
+  playAgainButton.addEventListener("click", () => {
+    window.location.reload();
   });
 }
 
