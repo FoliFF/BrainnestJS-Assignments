@@ -13,11 +13,7 @@ function computerPlay() {
   }
 }
 
-function playRound(playerSelection, computerSelection) {
-  // Convert both selections to lowercase to make the function case-insensitive
-  playerSelection = playerSelection.toLowerCase();
-  computerSelection = computerSelection.toLowerCase();
-  
+function playRound(playerSelection, computerSelection) {  
   // Define all possible outcomes
   const outcomes = {
     rock: {
