@@ -21,28 +21,26 @@ function playRound(playerSelection, computerSelection) {
   // Define all possible outcomes
   const outcomes = {
     rock: {
-      rock: 'Tie! Both chose rock',
-      paper: 'You Lose! Paper beats Rock',
-      scissors: 'You Win! Rock beats Scissors'
+      rock: 'Tie! Computer chose ✊ Rock',
+      paper: 'You Lose! Computer chose 🤚 Paper',
+      scissors: 'You Win! Computer chose ✌️ Scissors'
     },
     paper: {
-      rock: 'You Win! Paper beats Rock',
-      paper: 'Tie! Both chose paper',
-      scissors: 'You Lose! Scissors beat Paper'
+      rock: 'You Win! Computer chose ✊ Rock',
+      paper: 'Tie! Computer chose 🤚 Paper',
+      scissors: 'You Lose! Computer chose ✌️ Scissors'
     },
     scissors: {
-      rock: 'You Lose! Rock beats Scissors',
-      paper: 'You Win! Scissors beat Paper',
-      scissors: 'Tie! Both chose scissors'
+      rock: 'You Lose! Computer Chose ✊ Rock',
+      paper: 'You Win! Computer chose 🤚 Paper',
+      scissors: 'Tie! Computer ✌️ Scissors'
     }
   };
   
   // Return the appropriate outcome based on the player and computer selections
   if (outcomes[playerSelection][computerSelection]) {
     return outcomes[playerSelection][computerSelection];
-  } else {
-    return 'Invalid selection! Please choose Rock, Paper, or Scissors.';
-  }
+  } 
 }
 
 function game() {
